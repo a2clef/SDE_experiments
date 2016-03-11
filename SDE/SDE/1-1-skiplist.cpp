@@ -182,6 +182,31 @@ public:
 		skiplist_build();
 	};
 
+	~skiplist()
+	/*
+		the destructor
+		free all memory used by the structure
+
+	*/
+	{
+		skiplist_node<T>* ptr_node_now;
+		skiplist_node<T>* ptr_node_del;
+		skiplist_node<T>* ptr_level = pointer_head;
+		while (ptr_level)
+		{
+			ptr_node_del = ptr_level;
+			ptr_level = ptr_level->pointer_next_layer;
+			ptr_node_now = ptr_node_del->pointer_next_element;
+			while (ptr_node_del)
+			{
+				delete ptr_node_del;
+				ptr_node_del = ptr_node_now;
+				if (!ptr_node_del) break;
+				ptr_node_now = ptr_node_now->pointer_next_element;
+			};
+		}
+		return;
+	};
 
 
 private:
