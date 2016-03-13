@@ -3,7 +3,28 @@
 
 #define MAX_LENGTH_PATTERN 100
 
+/*
 
+4 4
+8
+1 1 1
+1 3 3
+2 2 5
+2 4 7
+3 1 2
+3 3 4
+4 2 6
+4 4 8
+
+2 4
+4
+1 1 1
+1 3 3
+2 2 5
+2 4 7
+
+
+*/
 int kmp(std::string &input, std::string &pattern)
 {
 	int length_input = input.length();
