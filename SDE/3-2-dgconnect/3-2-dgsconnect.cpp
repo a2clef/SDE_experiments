@@ -13,7 +13,23 @@ int ComponentNumber = 0;      //part count
 int Index = 0;             
 int N;
 vector <int> Edge[M];        //storages the list 
+/*
+4
+1 2
+2 3
+3 4
+4 1
+-1 -1
 
+4
+1 2
+2 3
+1 4
+4 3
+-1 -1
+
+
+*/
 
 void Tarjan(int i)
 {

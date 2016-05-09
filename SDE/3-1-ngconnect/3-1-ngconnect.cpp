@@ -14,7 +14,33 @@ int HaveCP = 0;      //have a crucial point
 int Index = 0;
 int N;
 vector <int> Edge[M];        //storages the list 
+/*
+7
+1 2
+2 3
+3 4
+4 5
+5 6
+6 7
+1 7
+3 7
+3 6
+-1 -1
 
+7
+1 2
+2 3
+3 4
+4 5
+5 6
+1 7
+3 7
+3 6
+-1 -1
+
+
+
+*/
 
 void Tarjan(int i)
 {
